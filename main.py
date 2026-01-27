@@ -1,6 +1,6 @@
 import os
 
-contatos = []
+lista_de_contatos = []
 
 # TITULO
 def titulo_projeto():
@@ -26,7 +26,7 @@ def escolha_das_opcoes():
             if escolha == 1:
                 adicionar_contato()
             elif escolha == 2:
-                print("teste 2")
+                listar_contato()
             elif escolha == 3:
                 print("teste 3")
             elif escolha == 4:
@@ -76,7 +76,7 @@ def visualizar_projeto():
     opcao_menu()
     escolha_das_opcoes()
 
-# ADICIONAR CONTATO
+# ADICIONAR CONTATOS
 def adicionar_contato():
     titulos("𝑨𝒅𝒊𝒄𝒊𝒐𝒏𝒂𝒓 𝑪𝒐𝒏𝒕𝒂𝒕𝒐")
     
@@ -84,8 +84,31 @@ def adicionar_contato():
     telefone = int(input("Digite o telefone: "))
     email = input("Digite o email: ")
     
+    contato = {}
+    contato["nome:"] = nome
+    contato["telefone:"] = telefone
+    contato["email:"] = email
+    
+    lista_de_contatos.append(contato)
+        
     print("\n✅ Contato capturado com sucesso!")
     voltar()
-
+    
+# LISTAR CONTATOS
+def listar_contato():
+    titulos("𝑳𝒊𝒔𝒕𝒂 𝒅𝒆 𝑪𝒐𝒏𝒕𝒂𝒕𝒐𝒔")
+    
+    
+    if not lista_de_contatos:
+        print("Sua agenda parece um pouco solitária... 👤✨")
+        print("Que tal adicionar o primeiro contato para começar a sua rede?")    
+    else:
+        print(f"Total de conexões salvas: {len(lista_de_contatos)} 📱\n")
+        
+        for numero, tarefa in enumerate(lista_de_contatos, start=1): 
+            print(f"{numero:02d} → {tarefa}") 
+            print("--------------------")
+    
+    voltar()
    
 visualizar_projeto()
