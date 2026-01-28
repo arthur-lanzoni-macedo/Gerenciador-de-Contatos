@@ -1,8 +1,8 @@
 # 📇 Gerenciador de Contatos em Python
 
-Projeto simples em **Python** desenvolvido para praticar lógica de programação, funções, estruturas de controle e interação com o usuário via terminal.
+Projeto simples em Python desenvolvido para praticar lógica de programação, uso de funções, estruturas de controle e interação com o usuário via terminal.
 
-O sistema funciona como um **gerenciador de contatos**, permitindo ao usuário navegar por um menu de opções no console.
+O sistema funciona como um gerenciador de contatos, permitindo navegar por um menu interativo no console.
 
 ---
 
@@ -60,14 +60,14 @@ gerenciador-contatos/
 │── README.md
 ```
 
-## 🚧 Melhorias Futuras
+## 🚧 Funcionalidades em Desenvolvimento
 
-- Implementar listagem de contatos
-- Implementar busca por nome
-- Implementar remoção de contatos
-- Exportar contatos para arquivo .txt ou .csv
-- Validação de dados (telefone e e-mail)
-- Persistência dos contatos em arquivo
+- 🔍 Buscar contato
+- 🗑️ Remover contato
+- 📤 Exportar lista de contatos
+- ✔️ Validação de dados (telefone e e-mail)
+- 💾 Persistência dos contatos em arquivo
 
 ## 👨‍💻 Autor
 Arthur Lanzoni
+
