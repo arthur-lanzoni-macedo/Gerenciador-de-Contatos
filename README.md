@@ -59,14 +59,8 @@ gerenciador-contatos/
 │── main.py
 │── README.md
 ```
-
-## 🚧 Funcionalidades em Desenvolvimento
-
-- 📤 Exportar lista de contatos
-- ✔️ Validação de dados (telefone e e-mail)
-- 💾 Persistência dos contatos em arquivo
-
 ## 👨‍💻 Autor
 Arthur Lanzoni
+
 
 
