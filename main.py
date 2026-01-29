@@ -1,4 +1,6 @@
 import os
+import csv
+
 
 lista_de_contatos = []
 
@@ -32,14 +34,13 @@ def escolha_das_opcoes():
             elif escolha == 4:
                 remover_contato()
             elif escolha == 5:
-                print("teste 5")
+                exportar_contatos()
             elif escolha == 6:
                 sair_do_programa()
             else:
                 opcao_invalida()
         except ValueError:
-            opcao_invalida()
-            
+            opcao_invalida()            
 
 # OPÇÃO INVÁLIDA     
 def opcao_invalida():
@@ -64,7 +65,13 @@ def voltar():
     print("\n⌨️  Pressione [Enter] para voltar ao menu... 🔙")
     input()
     voltar_ao_menu()
-        
+
+# MENSAGEM VAZIA
+def mensagem_vazia():
+    print("\n🌟 Ops! Parece que sua lista de contatos ainda está em branco. 🏜️")
+    print("Que tal adicionar alguém para dar vida a ela? ✨")
+    print("-" * 30)
+    
 # SAIR
 def sair_do_programa():
     print("\n👋 Saindo do sistema... Até logo!")
@@ -99,8 +106,7 @@ def listar_contato():
     titulos("𝑳𝒊𝒔𝒕𝒂 𝒅𝒆 𝑪𝒐𝒏𝒕𝒂𝒕𝒐𝒔")
     
     if not lista_de_contatos:
-        print("Sua agenda parece um pouco solitária... 👤✨")
-        print("Que tal adicionar o primeiro contato para começar a sua rede?")    
+        mensagem_vazia()   
     else:
         print(f"Total de conexões salvas: {len(lista_de_contatos)} 📱\n")
         
@@ -116,9 +122,7 @@ def buscar_contato():
     titulos("𝑩𝒖𝒔𝒄𝒂𝒓 𝑪𝒐𝒏𝒕𝒂𝒕𝒐")
     
     if not lista_de_contatos:
-        print("\n🌟 Ops! Parece que sua lista de contatos ainda está em branco. 🏜️")
-        print("Que tal adicionar alguém para dar vida a ela? ✨")
-        print("-" * 30)
+        mensagem_vazia()
     else:
         
         buscar = input("Digite o nome que deseja buscar: ").lower()
@@ -171,5 +175,22 @@ def remover_contato():
 
     voltar()      
 
+# EXPORTAR CONTATOS
+def exportar_contatos():
+    titulos("𝑬𝒙𝒑𝒐𝒓𝒕𝒂𝒓 𝑪𝒐𝒏𝒕𝒂𝒕𝒐𝒔")
+    
+    if not lista_de_contatos:
+        mensagem_vazia()  
+    else:
+       with open("lista_de_contatos.txt", "w") as arquivo:
+           for contato in lista_de_contatos:
+               arquivo.write(f"Nome: {contato['nome:']}\n")
+               arquivo.write(f"Telefone: {contato['telefone:']}\n")
+               arquivo.write(f"E-mail: {contato['email:']}\n")
+               arquivo.write("-" * 30 + "\n")
+               
+    print("\n📄 Relatório de exportação concluído com êxito.")
+    
+    voltar()
 
 visualizar_projeto()
