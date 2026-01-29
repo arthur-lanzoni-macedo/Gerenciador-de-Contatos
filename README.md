@@ -18,9 +18,7 @@ O sistema funciona como um gerenciador de contatos, permitindo navegar por um me
 - ⚠️ Tratamento de erros para opções inválidas
 - 🔁 Navegação entre telas com retorno ao menu
 - ❌ Opção para sair do sistema
-
-> Algumas funcionalidades ainda estão em desenvolvimento e aparecem como testes no menu.
-
+- 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
@@ -61,6 +59,7 @@ gerenciador-contatos/
 ```
 ## 👨‍💻 Autor
 Arthur Lanzoni
+
 
 
 
