@@ -62,12 +62,11 @@ gerenciador-contatos/
 
 ## 🚧 Funcionalidades em Desenvolvimento
 
-- 🔍 Buscar contato
-- 🗑️ Remover contato
 - 📤 Exportar lista de contatos
 - ✔️ Validação de dados (telefone e e-mail)
 - 💾 Persistência dos contatos em arquivo
 
 ## 👨‍💻 Autor
 Arthur Lanzoni
+
 
